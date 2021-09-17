@@ -136,18 +136,21 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 DOMAIN_NAME = 'http://localhost:8888'
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = '25'
+#EMAIL_HOST = 'localhost'
+#EMAIL_PORT = '25'
 #EMAIL_HOST_USER = 'django@geekshop.local'
 #EMAIL_HOST_PASSWORD = 'geekshop'
-EMAIL_USE_SSL = False
+#EMAIL_USE_SSL = False
 #EMAIL_USE_TLS = True
 
 
 # вариант python -m smtpd -n -c DebuggingServer localhost:25
-EMAIL_HOST_USER, EMAIL_HOST_PASSWORD = None, None
+#EMAIL_HOST_USER, EMAIL_HOST_PASSWORD = None, None
 
 # вариант логирования сообщений почты в виде файлов вместо отправки
-# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-# EMAIL_FILE_PATH = 'tmp/email-messages/'
-
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = 'tmp/email-messages/'
+#EMAIL_HOST = 'smtp.mailtrap.io'
+#EMAIL_HOST_USER = '18d3620cdc2e31'
+#EMAIL_HOST_PASSWORD = '76d5b2db085908'
+#EMAIL_PORT = '2525'
