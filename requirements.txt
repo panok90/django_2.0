@@ -1,0 +1,5 @@
+Django~=3.2.7
+django-environ
+social_auth_app_django
+Pillow
+requests
