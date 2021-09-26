@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'baskets',
     'admins',
     'social_django',
+    'orders',
 ]
 
 AUTHENTICATION_BACKENDS = (
@@ -67,7 +68,7 @@ ROOT_URLCONF = 'geekshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['admins/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
