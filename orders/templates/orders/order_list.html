@@ -47,20 +47,20 @@
                                        <td>{{ item.get_status_display }}</td>
                                        <td>
                                            <a href="{% url 'orders:order_read' item.pk %}">
-                                               посмотреть
+                                               <button class="btn btn-success">посмотреть</button>
                                            </a>
                                        </td>
                                        <td>
                                            {% if item.status == 'FM' %}
                                              <a href="{% url 'orders:order_update' item.pk %}">
-                                               редактировать
+                                                 <button class="btn btn-success">редактировать</button>
                                              </a>
                                            {% endif %}
                                        </td>
                                        <td>
                                            {% if item.status == 'FM' %}
                                              <a href="{% url 'orders:order_delete' item.pk %}">
-                                                 удалить
+                                                 <button class="btn btn-success">удалить</button>
                                              </a>
                                            {% endif %}
                                        </td>

@@ -1,6 +1,11 @@
 {% extends "admins/base.html" %}
 {% load static %}
 
+{% block js %}
+    <script src = "{% static 'orders/js/orders_scripts.js' %}"></script>
+    <script src = "{% static 'orders/js/jquery.formset.js' %}"></script>
+{% endblock %}
+
 {% block content %}
    {% include 'orders/includes/inc_order_summary.html' %}
    <div class="order_form">
@@ -12,7 +17,7 @@
                {% for form in orderitems.forms %}
                    {% if forloop.first %}
                        <thead>
-                       <tr>
+                       <tr class="formset_row">
                            {% for field in form.visible_fields %}
                                <th class="{% cycle 'td1' 'td2' 'td3' %} order formset_td">
                                    {{ field.label|capfirst }}
@@ -30,7 +35,15 @@
                                    {% endfor %}
                                {% endif %}
                                {{ field.errors.as_ul }}
-                               {{ field }}
+                               {% if field.name != 'price' %}
+                                   {{ field }}
+                               {% else %}
+                                   {% if field.value %}
+                                       <span class="orderitems-{{ forloop.parentloop.counter0 }}-price">
+                                           {{ field.value }}
+                                       </span> руб
+                                   {% endif %}
+                               {% endif %}
                            </td>
                        {% endfor %}
                    </tr>

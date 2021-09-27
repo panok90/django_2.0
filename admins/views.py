@@ -5,8 +5,9 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
+from products.models import ProductCategory
 from users.models import User
-from .forms import UserAdminRegisterForm, UserAdminProfileForm
+from .forms import UserAdminRegisterForm, UserAdminProfileForm, CategoryAdminRegisterForm
 
 
 @user_passes_test(lambda u: u.is_superuser)
@@ -52,3 +53,20 @@ class UserDeleteView(DeleteView):
         self.object.is_active = False
         self.object.save()
         return HttpResponseRedirect(self.get_success_url())
+
+
+class CategoryListView(ListView):
+    model = ProductCategory
+    template_name = 'admins/admin-categories.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(CategoryListView, self).get_context_data(**kwargs)
+        context['title'] = 'GeekShop - Админ | Категории'
+        return context
+
+
+class CategoryCreateView(CreateView):
+    model = ProductCategory
+    template_name = 'admins/admin-category-create.html'
+    form_class = CategoryAdminRegisterForm
+    success_url = reverse_lazy('admins:categories')
