@@ -10,6 +10,10 @@ class Basket(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     created_timestamp = models.DateTimeField(auto_now_add=True)
 
+    @staticmethod
+    def get_item(pk):
+        return Basket.objects.filter(pk=pk).first()
+
     def __str__(self):
         return f'Корзина для {self.user.username} | Продукт {self.product.name}'
 
