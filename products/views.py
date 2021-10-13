@@ -1,7 +1,10 @@
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 from django.conf import settings
 from django.core.cache import cache
+from django.db import connection
 
 from common.views import CommonContextMixin
 from products.models import Product, ProductCategory
@@ -54,6 +57,7 @@ class ProductsListView(CommonContextMixin, ListView):
         context['products'] = get_products()
         return context
 
+
 # def index(request):
 #     context = {'title': 'GeekShop'}
 #     return render(request, 'products/index.html', context)
@@ -71,3 +75,20 @@ class ProductsListView(CommonContextMixin, ListView):
 #         products_paginator = paginator.page(paginator.num_pages)
 #     context['products'] = products_paginator
 #     return render(request, 'products/products.html', context)
+
+
+def db_profile_by_type(prefix, type, queries):
+    update_queries = list(filter(lambda x: type in x['sql'], queries))
+    print(f'db_profile {type} for {prefix}:')
+    [print(query['sql']) for query in update_queries]
+
+
+@receiver(pre_save, sender=ProductCategory)
+def product_is_active_update_productcategory_save(sender, instance, **kwargs):
+    if instance.pk:
+        if instance.is_active:
+            instance.product_set.update(is_active=True)
+        else:
+            instance.product_set.update(is_active=False)
+
+        db_profile_by_type(sender, 'UPDATE', connection.queries)

@@ -31,10 +31,18 @@ class UserRegistrationForm(UserCreationForm):
         'class': 'form-control py-4', 'placeholder': 'Введите пароль'}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control py-4', 'placeholder': 'Подтвердите пароль'}))
+    age = forms.CharField(widget=forms.NumberInput(attrs={
+        'class': 'form-control py-4', 'placeholder': 'Подтвердите возраст'}))
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'first_name', 'last_name', 'password1', 'password2')
+        fields = ('username', 'email', 'first_name', 'last_name', 'password1', 'password2', 'age')
+
+    def clean_age(self):
+        data = self.cleaned_data['age']
+        if int(data) < 18:
+            raise forms.ValidationError("Вы слишком молоды!")
+        return data
 
     def save(self):
         user = super(UserRegistrationForm, self).save()

@@ -1,0 +1,259 @@
+[
+  {
+    "model": "sessions.session",
+    "pk": "4m9leo8anty71otdb0qfeuta6kdep6ai",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-JfZS0ucM1nq9wQHkSHFSIe5OIqWAdmbee4uI21ri1niJUxZXocXllyWkJ9dD5AfW-yxprusyJXkk8rRNDnPm1-1s_w4KtrKvHScm8Ka3DpG196ADhbFLOZluNIoJde8sOEMAyM5lZRVztirsiEB8vu5MOAI:1mY8FB:Dv9QYlc2rZwG47TIA1-mBXNaq1QCdvS47rcl1li-0Sw",
+      "expire_date": "2021-10-20T14:50:05.620Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vdjs9u0iruiy248q3ozkshzv35p7zofi",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-JfZS0ucM1nq9wQHkSHFSIe5OIqWAdmbee4uI21ri1niJUxZXocXllyWkJ9dD5AfW-yxprusyJXkk8rRNDnPm1-1s_w4KtrKvHScm8Ka3DpG196ADhbFLOZluNIoJde8sOEMAyM5lZRVztirsiEB8vu5MOAI:1mZXFc:omGNmHdftpVaF-9v3Ou-FaHYYvBQl7-U5P7cgotpNc8",
+      "expire_date": "2021-10-24T11:44:20.762Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vmhxldwpmjjzrhm1oezsiu1r2w8lzveo",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-JfZS0ucM1nq9wQHkSHFSIe5OIqWAdmbee4uI21ri1niJUxZXocXllyWkJ9dD5AfW-yxprusyJXkk8rRNDnPm1-1s_w4KtrKvHScm8Ka3DpG196ADhbFLOZluNIoJde8sOEMAyM5lZRVztirsiEB8vu5MOAI:1mXrhj:C0M97M4FJhF5m2VyN0ev74jwvULZsntDd6sTwcuF-RI",
+      "expire_date": "2021-10-19T21:10:27.606Z"
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Новинки",
+      "description": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Обувь",
+      "description": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Одежда",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 5,
+    "fields": {
+      "name": "Аксессуары",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 6,
+    "fields": {
+      "name": "Подарки",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Худи черного цвета с монограммами adidas Originals",
+      "image": "products_images/Adidas-hoodie.png",
+      "description": "Мягкая ткань для свитшотов. Стиль и комфорт – это образ жизни.",
+      "price": "1462.21",
+      "quantity": 6,
+      "category": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Синяя куртка The North Face",
+      "image": "products_images/Blue-jacket-The-North-Face.png",
+      "description": "Гладкая ткань. Водонепроницаемое покрытие. Легкий и теплый пухов",
+      "price": "23725.00",
+      "quantity": 10,
+      "category": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Коричневый спортивный oversized-топ ASOS DESIGN",
+      "image": "products_images/Brown-sports-oversized-top-ASOS-DESIGN.png",
+      "description": "Материал с плюшевой текстурой. Удобный и мягкий.",
+      "price": "813.94",
+      "quantity": 13,
+      "category": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Черный рюкзак Nike Heritage",
+      "image": "products_images/Black-Nike-Heritage-backpack.png",
+      "description": "Плотная ткань. Легкий материал.",
+      "price": "2340.00",
+      "quantity": 19,
+      "category": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex",
+      "image": "products_images/Black-Dr-Martens-shoes.png",
+      "description": "Гладкий кожаный верх. Натуральный материал.",
+      "price": "13590.00",
+      "quantity": 4,
+      "category": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "Темно-синие широкие строгие брюки ASOS DESIGN",
+      "image": "products_images/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png",
+      "description": "Легкая эластичная ткань сирсакер Фактурная ткань.",
+      "price": "693.89",
+      "quantity": 32,
+      "category": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$FFBm9PyFCsJwJv76kZ1GU7$e5uAQyEUdVcyYA1ygKx18KvdHwx2QJ098WWoAvB97r8=",
+      "last_login": "2021-10-10T11:44:20.592Z",
+      "is_superuser": true,
+      "username": "su",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-10-05T20:27:05.357Z",
+      "image": "",
+      "age": null,
+      "activation_key": "",
+      "activation_key_expires": "2021-10-07T20:26:32.706Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.shopuserprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "tagline": "",
+      "aboutme": "",
+      "gender": ""
+    }
+  },
+  {
+    "model": "baskets.basket",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "product": 2,
+      "quantity": 1,
+      "created_timestamp": "2021-10-10T11:44:29.610Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "baskets.basket",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "product": 3,
+      "quantity": 1,
+      "created_timestamp": "2021-10-10T11:44:34.779Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "created": "2021-10-07T13:05:18.315Z",
+      "updated": "2021-10-07T13:05:18.635Z",
+      "status": "FM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 2,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "quantity": 4
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 1,
+      "product": 4,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 5,
+    "fields": {
+      "order": 1,
+      "product": 6,
+      "quantity": 2
+    }
+  }
+]
