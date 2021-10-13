@@ -2,4 +2,5 @@ Django~=3.2.7
 django-environ
 social_auth_app_django
 Pillow
-requests
+requests~=2.26.0
+django-debug-toolbar~=3.2.2

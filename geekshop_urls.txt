@@ -1,0 +1,13 @@
+http://127.0.0.1:8888/
+http://127.0.0.1:8888/products/
+http://127.0.0.1:8888/contact/
+http://127.0.0.1:8888/products/category/1/
+http://127.0.0.1:8888/products/category/2/
+http://127.0.0.1:8888/products/category/3/
+http://127.0.0.1:8888/products/category/4/
+http://127.0.0.1:8888/basket/
+http://127.0.0.1:8888/order/
+http://127.0.0.1:8888/users/edit/
+http://127.0.0.1:8888/order/update/1/
+siege -f /home/django/geekshop/urls.txt -d0 -r49 -c1 --debug
+http://127.0.0.1:8888/order/read/1/
